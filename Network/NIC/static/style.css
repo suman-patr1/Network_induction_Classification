@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background-image: url('wall.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+  }
+  .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 250px;
+    width: 580px;
+    height: 480px;
+    background-color:rgba(57, 47, 56, 0.14);
+    /* background: transparent; */
+    border: 1px transparent;
+    border-radius: 8px;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+
+  .container form{
+    position: absolute;
+    inset: 4px;
+    background: transparent;
+    padding: 0px 90px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    
+    flex-direction: column;
+  }
+  .container form h2{
+    color:#eccc15;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+  .container form .input-data{
+    position: relative;
+    margin-top: 0px;
+  }
+  .container form .input-data input{
+    position: relative;
+   
+    width: 100%;
+    padding: 20px 5px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #23242a;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+    transition: 0.05s;
+    z-index: 1;
+  }
+  .container form .input-data span{
+    position: absolute;
+    left: 0;
+    padding: 25px 0px 10px;
+    pointer-events: none;
+    color: #40f2da;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+    transition: 0.05s;
+  }
+  .container form .input-data input:valid ~ span,
+  .container form .input-data input:focus ~ span
+  {
+    color: #f3f9f9;
+    font-size:0.75em;
+    transform: translateY(-20px);
+    
+  }
+  .container form .input-data i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: #f9f8f8;
+    
+    border-radius: 1px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+  }
+  .container form .input-data input:valid ~ i,
+  .container form .input-data input:focus ~ i
+  {
+    height: 25px;
+  }
+  .container form button[type='submit']
+  {
+    border: none;
+    outline: none;
+    padding: 9px 5px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+  }
+  .container form button[type='submit']:active{
+    opacity: 0.8;
+  }
+  .wrap {
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.button {
+min-width: 30px;
+min-height: 30px;
+font-family: 'Nunito', sans-serif;
+font-size: 22px;
+text-transform: uppercase;
+letter-spacing: 1.3px;
+font-weight: 700;
+color: #313133;
+background: #4FD1C5;
+background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+border: none;
+border-radius: 1000px;
+box-shadow: 12px 12px 24px rgba(227, 137, 46, 0.64);
+transition: all 0.3s ease-in-out 0s;
+cursor: pointer;
+outline: none;
+position: relative;
+padding: 10px;
+}
+
+button::before {
+content: '';
+/* border-radius: -10px; */
+min-width: calc(90px + 12px);
+min-height: calc(30px + 12px);
+border: 1px solid #d7e14d;
+box-shadow: 0 0 60px rgba(223, 56, 19, 0.64);
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+opacity: 0;
+transition: all .3s ease-in-out 0s;
+}
+
+ .button:hover, .button:focus {
+color: #313133;
+transform: translateY(-6px);
+}
+
+button:hover::before, button:focus::before {
+opacity: 1;
+}
+
+button::after {
+content: '';
+width: 10px; height: 10px;
+border-radius: 100%;
+border: 6px solid #00FFCB;
+position: absolute;
+z-index: -1;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+animation: ring 1.5s infinite;
+}
+
+button:hover::after, button:focus::after {
+animation: none;
+display: none;
+}
+
+@keyframes ring {
+0% {
+width: 10px;
+height: 10px;
+opacity: 1;
+}
+100% {
+width: 125px;
+height: 125px;
+opacity: 0;
+}
+}
+.container form .from-row{
+position: relative;
+display: flex;
+flex-direction: row;
+}
+.container form .from-row .input-data{
+margin-right: 10px;
+margin-left: 20px;
+}
+.container form p{
+text-align: center;
+margin-bottom: 30px;
+
+}
+.container form .input-data[title='sp']{
+position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 1px;
+    background: #f9f8f8;
+    
+    border-radius: 1px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}   

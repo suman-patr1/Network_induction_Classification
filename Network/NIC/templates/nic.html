@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetworkInductionDetection</title>
+    {% load static %}
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <span class="border-line"></span>
+        <form method="POST">
+         {% csrf_token %}
+         <h2>Network Induction Detection</h2>
+         <div class="from-row">
+              <div class="input-data">
+                 <input type="text" name="PN" autocomplete="off" required>
+                  <span>Enter Port Numbers:</span>
+                  <i></i>
+              </div>
+              <div class="input-data">
+                 <input type="text" name="RP" autocomplete="off" required>
+                 <span>Enter Received Packets:</span>
+                 <i></i>
+              </div>
+            </div>
+            <div class="from-row">
+              <div class="input-data">
+                 <input type="text" name="RB" autocomplete="off" required>
+                 <span>Enter Received Bytes:</span>
+                 <i></i>
+              </div>
+              <div class="input-data">
+                 <input type="text" name="SP" autocomplete="off" required>
+                 <span>Enter Send Packets:</span>
+                 <i></i>
+              </div>
+            </div>
+            <div class="from-row">
+            <div class="input-data">
+               <input type="text" name="SB" autocomplete="off" required>
+               <span>Enter Send Bytes:</span>
+               <i></i>
+            </div>
+            <div class="input-data">
+               <input type="text" name="PAD" autocomplete="off" required>
+               <span>Enter Port Alive Duration:</span>
+               <i></i>
+            </div>
+        </div>
+        <div class="from-row">
+            <div class="input-data">
+               <input type="text" name="DSB" autocomplete="off" required>
+                <span>Enter Delta Sent Bytes:</span>
+                <i></i>
+            </div>
+            <div class="input-data">
+               <input type="text" name="DSP" autocomplete="off" required>
+               <span>Enter Delta Sent Packets:</span>
+               <i></i>
+            </div>
+        </div>
+        <div class="from-row">
+            <div class="input-data">
+               <input type="text" name="DPAD" autocomplete="off" required>
+                <span> Delta Port Alive Duration:</span>
+                <i></i>
+            </div>
+            <div class="input-data">
+               <input type="text" name="CP" autocomplete="off" required>
+               <span>Enter Connection Point:</span>
+               <i></i>
+            </div>
+        </div>
+        <div class="from-row">
+            <div class="input-data">
+               <input type="text" name="AFE" autocomplete="off" required>
+                <span> Active Flow Entries:</span>
+                <i></i>
+            </div>
+            <div class="input-data">
+               <input type="text" name="PLU" autocomplete="off" required>
+               <span>Packets Looked Up:</span>
+               <i></i>
+            </div>
+        </div>
+        <div class="from-row">
+            <div class="input-data">
+               <input type="text" name="PM" autocomplete="off" required>
+                <span> Enter Packets Matched:</span>
+                <i></i>
+            </div>
+            <div class="input-data">
+               <input type="text" name="LBC" autocomplete="off" required>
+               <span>Latest Byte Counter:</span>
+               <i></i>
+            </div>
+        </div>
+        <div class="wrap"><button class="button" type="submit" name="btnpredict">Predict</button></div>
+         
+         
+         <div>
+            <p class="lasttr">{{result}}</p>
+         </div>
+        </form>
+        </div>
+</body>
+</html>
